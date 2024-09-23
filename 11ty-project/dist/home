@@ -13,7 +13,7 @@
                 <li><a href="/">Home</a></li>
                 <li><a href="/about">About</a></li>
                 <li><a href="/projects">Projects</a></li>
-                <li><a href="/contacts">Contact</a></li>
+                <li><a href="/contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -23,7 +23,7 @@
 
 
 <h1>Welcome to my Portfolio!</h1>
-<p>Hi! My name is Kareem. Explore my projects and get to know more about me!</p>
+<p>Hi! My name is Colin. Explore my projects and get to know more about me!</p>
 
 
 
@@ -31,7 +31,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 Kareem</p>
+        <p>&copy; 2024 Colin Bond</p>
     </footer>
 </body>
 </html>

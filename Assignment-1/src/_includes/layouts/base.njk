@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <title>{{ title }}</title>
 </head>
 
 <body>
@@ -19,11 +19,7 @@
     </header>
 
     <main>
-        
-
-
-<h1>About Me</h1>
-<p>I am a super passionate software developer, and I love coding all the time. My favourite languages are Python, JavaScript and C#</p>
+        {{ content | safe }}
     </main>
 
     <footer>

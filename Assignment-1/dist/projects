@@ -1,24 +1,40 @@
 <!DOCTYPE html>
+
+
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="/bundle.css">
-    <title>Projects</title>
+    
+    <title>Colin Code - Projects</title>
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    
+    <script>
+        $(function(){
+            $('a').each(function(){
+                if ($(this).prop('href') == window.location.href) {
+                    $(this).addClass('active'); $(this).parents('li').addClass('active');
+                }
+            });
+        });
+    </script>
 </head>
 
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">Colin Bond</a>
+            <a class="navbar-brand" href="/"><h3>CC</h3></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/about">About</a>
@@ -36,7 +52,39 @@
 
     <main>
         
+        
+
+
 <h1>Explore my Projects!</h1>
+
+
+
+<div class="row justify-content-center">
+    <div class="card-dark" style="background-color: #6c757d; color: white; width: 18rem;">
+        <img class="card-img-top" src="../../android.png" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">Greeting Card App</h5>
+            <p class="card-text">This most recent introductory assignment was completed this year for Mobile Development. It is a Kotlin-coded app that uses the Android Studio greeting card template to take a name and display a greeting for it.</p>
+            <a href="https://github.com/cbcode4007/GreetingCard" class="btn btn-primary">GitHub Source</a>
+        </div>
+    </div>
+    <div class="card-dark" style="background-color: #6c757d; color: white; width: 18rem;">
+        <img class="card-img-top" src="../../maxresdefault.jpg" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">Blog Page</h5>
+            <p class="card-text">This program was developed for last year's Web Development - Client Side Scripting course, in which I first used Bootstrap and Flexbox to create a responsive blog page on a website of mine.</p>
+            <a href="https://github.com/cbcode4007/INFT2202/tree/main/Lab3-Colin" class="btn btn-primary">GitHub Source</a>
+        </div>
+    </div>
+    <div class="card-dark" style="background-color: #6c757d; color: white; width: 18rem;">
+        <img class="card-img-top" src="../../mongo.jpg" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">MVC and MongoDB Page</h5>
+            <p class="card-text">This program was developed for last year's Web Dev. - CSS course, in which I first used MVC Architecture and MongoDB to create a site for retrieving and handling records from a zoo database.</p>
+            <a href="https://github.com/cbcode4007/INFT2202/tree/main/Lab4-Colin" class="btn btn-primary">GitHub Source</a>
+        </div>
+    </div>
+</div>        
     </main>
 
     <footer>

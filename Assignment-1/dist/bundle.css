@@ -1,6 +1,14 @@
+/*
+  Author:      Colin Bond
+  Date:        October 4 2024
+  File:        bundle.css
+  Description: Cascading Style Sheet for Assignment 1 website formatting
+*/
+
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: lightgrey;
+    background-color: #343A40;
+    color: white;
     }
 * {box-sizing: border-box;}
 * {
@@ -14,7 +22,7 @@ input[type=text], select, textarea {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
-  margin-top: 6px;
+  margin-top: 0px;
   margin-bottom: 16px;
   resize: vertical;
 }
@@ -44,14 +52,39 @@ html, body {
 }
 body {
     display: grid;
-    grid-template-rows: auto 1fr auto; /* Footer at the bottom */
+    grid-template-rows: auto 1fr auto;
+    text-align: center;
 }
 main {
-    padding: 20px; /* Optional for spacing */
+    padding: 20px;
+}
+h1 {
+  margin: 10px;
 }
 footer {
-    background-color: #333;
+    background-color: #343A40;
     color: white;
     text-align: center;
     padding: 1em;
+}
+.navbar-nav {
+  margin: 10px;
+}
+
+p {
+  margin: 20px;
+  text-align: center;
+}
+
+.card-dark {
+  margin: 50px;
+}
+
+.carousel {
+  margin: 30px;
+  justify-content: center;
+}
+
+.carousel-inner img {
+  margin: auto;
 }

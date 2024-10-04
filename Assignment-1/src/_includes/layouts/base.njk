@@ -1,24 +1,43 @@
 <!DOCTYPE html>
+
+{# Author:      Colin Bond
+   Date:        October 4 2024
+   File:        base.njk
+   Description: A template file for aspects that all pages of the site will share, such as navigation bar and footer.  #}
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {# Bootstrap Style Sheet in addition to my own custom one for utmost control over formatting #}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="/bundle.css">
-    <title>{{ title }}</title>
+    {# Uses the title variable of the page in its tab display #}
+    <title>Colin Code - {{ title }}</title>
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    {# Highlights whichever page the user is currently on in the nav bar, or turns the corresponding nav bar item to 'active' class state #}
+    <script>
+        $(function(){
+            $('a').each(function(){
+                if ($(this).prop('href') == window.location.href) {
+                    $(this).addClass('active'); $(this).parents('li').addClass('active');
+                }
+            });
+        });
+    </script>
 </head>
 
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">Colin Bond</a>
+            <a class="navbar-brand" href="/"><h3>CC</h3></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/about">About</a>
@@ -35,7 +54,8 @@
     </header>
 
     <main>
-        {{ content | safe }}
+        {# Other template files' source code will be injected here for each page #}
+        {{ content | safe }}        
     </main>
 
     <footer>

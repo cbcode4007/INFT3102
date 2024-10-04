@@ -3,8 +3,39 @@ layout: layouts/base.njk
 title: About
 permalink: /about
 ---
-
-{# comment #}
-
+{# Author:      Colin Bond
+   Date:        October 4 2024
+   File:        about.njk
+   Description: A template file to fill the content in base.njk for the eventual about me page of the site.  #}
+   
 <h1>About Me</h1>
-<p>I am a super passionate software developer, and I love coding all the time. My favourite languages are Python, JavaScript and C#</p>
+<p>Let's see... I'm on my third year of the Computer Programming and Analysis program at Durham College, my favourite languages to work with are Java, C# and COBOL, and... did I mention I love coding? Other than that, I'll sometimes write stories, listen to music, hang out with friends or just surf around the web in my free time.</p>
+
+{# Bootstrap Carousel Image Gallery, to represent a few of my interests #}
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner d-flex justify-content-center align-items-center">
+    <div class="carousel-item active">
+        <div class"d-flex justify-content-center align-items-center"><img class="d-block w-10" src="../../java.jpg" alt="Java logo"></div>
+    </div>
+    <div class="carousel-item">
+      <div class"d-flex justify-content-center align-items-center"><img class="d-block w-10" src="../../csharp.jpg" alt="C# logo"></div>
+    </div>
+    <div class="carousel-item">
+      <div class"d-flex justify-content-center align-items-center"><img class="d-block w-10" src="../../cobol.png" alt="IBM ZoS logo"></div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>

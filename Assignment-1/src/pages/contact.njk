@@ -4,18 +4,23 @@ title: Contact
 permalink: /contact
 ---
 
+{# Author:      Colin Bond
+   Date:        October 4 2024
+   File:        contact.njk
+   Description: A template file to fill the content in base.njk for the eventual contact me page of the site.  #}
+
 <h1>Contact Me!</h1>
 
 <p>Email: colin.bond@dcmail.ca</p>
 <p>Phone: +1 234-567-890</p>
 
-<div class="container">
+<div class="container bg-dark text-white">
   <form action="/action_page.php">
     <label for="fname">First Name</label><br><br>
-    <input type="text" id="fname" name="firstname" placeholder="Your name.."><br><br>
+    <input type="text" class="form-control" id="fname" name="firstname" placeholder="Your name.."><br><br>
 
     <label for="lname">Last Name</label><br><br>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name.."><br><br>
+    <input type="text" class="form-control" id="lname" name="lastname" placeholder="Your last name.."><br><br>
 
     <label for="country">Country</label><br><br>
     <select id="country" name="country">
@@ -27,6 +32,33 @@ permalink: /contact
     <label for="subject">Subject</label><br><br>
     <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea><br><br>
 
-    <input type="submit" value="Submit">
+    <button type="submit" class="btn btn-primary" id="submitBtn">Submit</button>
   </form>
 </div>
+
+<script>
+  // Function to handle form submission
+  function handleSubmit(event) {
+      event.preventDefault(); // Prevent form submission
+
+      // Get form input values
+      var fname = document.getElementById('fname').value;
+      var lname = document.getElementById('lname').value;
+      var country = document.getElementById('country').value;
+      var subject = document.getElementById('subject').value;
+
+      // Output user information to the console
+      console.log("First Name: " + fname);
+      console.log("Last Number: " + lname);
+      console.log("Country: " + country);
+      console.log("Subject: " + subject);
+
+      // Start timer to redirect after 3 seconds
+      setTimeout(function() {
+          window.location.href = "/"; // Redirect to home page
+      }, 3000);
+  }
+
+  // Add event listener to the form submit button
+  document.getElementById('submitBtn').addEventListener('click', handleSubmit);
+</script>

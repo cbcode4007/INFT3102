@@ -4,4 +4,38 @@ title: Projects
 permalink: /projects
 ---
 
+{# Author:      Colin Bond
+   Date:        October 4 2024
+   File:        projects.njk
+   Description: A template file to fill the content in base.njk for the eventual projects page of the site.  #}
+
 <h1>Explore my Projects!</h1>
+
+{# Bootstrap Cards, 3 each representing one project complete with images, titles and descriptions #}
+
+<div class="row justify-content-center">
+    <div class="card-dark" style="background-color: #6c757d; color: white; width: 18rem;">
+        <img class="card-img-top" src="../../android.png" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">Greeting Card App</h5>
+            <p class="card-text">This most recent introductory assignment was completed this year for Mobile Development. It is a Kotlin-coded app that uses the Android Studio greeting card template to take a name and display a greeting for it.</p>
+            <a href="https://github.com/cbcode4007/GreetingCard" class="btn btn-primary">GitHub Source</a>
+        </div>
+    </div>
+    <div class="card-dark" style="background-color: #6c757d; color: white; width: 18rem;">
+        <img class="card-img-top" src="../../maxresdefault.jpg" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">Blog Page</h5>
+            <p class="card-text">This program was developed for last year's Web Development - Client Side Scripting course, in which I first used Bootstrap and Flexbox to create a responsive blog page on a website of mine.</p>
+            <a href="https://github.com/cbcode4007/INFT2202/tree/main/Lab3-Colin" class="btn btn-primary">GitHub Source</a>
+        </div>
+    </div>
+    <div class="card-dark" style="background-color: #6c757d; color: white; width: 18rem;">
+        <img class="card-img-top" src="../../mongo.jpg" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">MVC and MongoDB Page</h5>
+            <p class="card-text">This program was developed for last year's Web Dev. - CSS course, in which I first used MVC Architecture and MongoDB to create a site for retrieving and handling records from a zoo database.</p>
+            <a href="https://github.com/cbcode4007/INFT2202/tree/main/Lab4-Colin" class="btn btn-primary">GitHub Source</a>
+        </div>
+    </div>
+</div>

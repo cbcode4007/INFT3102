@@ -1,1 +1,0 @@
-# My First Eleventy Project

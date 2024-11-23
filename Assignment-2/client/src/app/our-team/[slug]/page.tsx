@@ -1,6 +1,7 @@
 import qs from "qs";
 
 import { BlockRenderer, TeamPageBlock } from "@/app/components/blocks";
+import { Metadata } from "next";
 
 async function getTeamMember(slug: string) {
   const baseUrl = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:1337";
@@ -86,3 +87,8 @@ export default async function TeamMemberDetail({
     </div>
   );
 }
+
+export const metadata: Metadata = {
+  title: "CC - Our Team",
+  description: "Our Team Page",
+};

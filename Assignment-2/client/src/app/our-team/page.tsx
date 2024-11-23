@@ -1,6 +1,7 @@
 import qs from "qs";
 import Image from "next/image";
 import Link from "next/link";
+import { Metadata } from "next";
 
 async function getTeamMembers() {
   const baseUrl = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:1337";
@@ -73,12 +74,17 @@ function TeamMemberCard({
   );
 }
 
+export const metadata: Metadata = {
+  title: "CC - Our Team",
+  description: "Our Team Page",
+};
+
 export default async function OurTeam() {
   const teamMembers = await getTeamMembers();
 
   return (
     <div>
-      <h1 className="text-3xl font-bold mb-8">Our Team</h1>
+      <h1>Our Team</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {teamMembers.data.map((member: TeamMemberProps) => (
           <TeamMemberCard key={member.documentId} {...member} />

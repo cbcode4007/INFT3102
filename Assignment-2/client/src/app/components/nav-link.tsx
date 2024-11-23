@@ -17,11 +17,12 @@ export default function NavLink({ href, children }: Readonly<NavLinkProps>) {
   const isActive = href === "/" ? pathname === "/" : pathname.startsWith(href);
 
   return (
-    <li>
+    <li className="nav-item">
       <Link
         href={href}
         className={cn(
-          isActive ? "opacity-100" : "opacity-50 hover:opacity-100"
+          "nav-link",
+          isActive ? "opacity-100" : "opacity-50 hover:opacity-100"          
         )}
       >
         {children}

@@ -58,7 +58,7 @@ function TeamMemberCard({
   return (
     <Link
       href={`/our-team/${slug}`}
-      className="bg-white rounded-lg shadow-md overflow-hidden"
+      className="nav-link"
     >
       <Image
         src={imageUrl}
@@ -68,7 +68,7 @@ function TeamMemberCard({
       />
       <div className="p-6">
         <h3 className="text-xl font-semibold mb-2">{name}</h3>
-        <p className="text-gray-600">{description}</p>
+        <p className="text-white">{description}</p>
       </div>
     </Link>
   );
@@ -84,7 +84,7 @@ export default async function OurTeam() {
 
   return (
     <div>
-      <h1>Our Team</h1>
+      <h3>Our Team</h3>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {teamMembers.data.map((member: TeamMemberProps) => (
           <TeamMemberCard key={member.documentId} {...member} />

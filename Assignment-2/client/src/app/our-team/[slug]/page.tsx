@@ -81,12 +81,13 @@ export default async function TeamMemberDetail({
 
   return (
     <div>
-      {teamMember.blocks.map((block: TeamPageBlock) => (
-        <BlockRenderer key={block.id} block={block} />
+      {teamMember.blocks.map((block: TeamPageBlock, index: number) => (
+        <BlockRenderer key={`${block.id}-${index}`} block={block} />
       ))}
     </div>
   );
 }
+
 
 export const metadata: Metadata = {
   title: "CC - Our Team",

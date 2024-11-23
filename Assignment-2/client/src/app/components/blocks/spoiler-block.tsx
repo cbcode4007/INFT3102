@@ -15,13 +15,13 @@ export function SpoilerBlock({ block }: { block: SpoilerBlock }) {
   return (
     <div className="w-full mb-4 rounded-lg overflow-hidden shadow-md transition-all duration-300 ease-in-out">
       <button
-        className={`w-full flex justify-between items-center p-4 bg-gray-100 hover:bg-gray-200 transition-colors duration-300 ease-in-out ${
-          isExpanded ? "bg-gray-200" : ""
+        className={`w-full flex justify-between items-center p-4 bg-dark transition-colors duration-300 ease-in-out ${
+          isExpanded ? "bg-gray-300" : ""
         }`}
         onClick={() => setIsExpanded(!isExpanded)}
         aria-expanded={isExpanded}
       >
-        <span className="text-lg font-semibold text-gray-800">
+        <span className="text-lg font-semibold text-white">
           {block.title}
         </span>
         <span
@@ -38,7 +38,7 @@ export function SpoilerBlock({ block }: { block: SpoilerBlock }) {
         }`}
         aria-hidden={!isExpanded}
       >
-        <div className="p-4 bg-white text-gray-700 leading-relaxed">
+        <div className="p-4 bg-gray-300 text-gray-700 leading-relaxed">
           {block.content}
         </div>
       </div>
